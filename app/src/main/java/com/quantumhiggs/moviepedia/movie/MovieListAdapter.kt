@@ -3,6 +3,7 @@ package com.quantumhiggs.moviepedia.movie
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.quantumhiggs.moviepedia.R
@@ -20,7 +21,7 @@ class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.ListViewHolder>()
         if (newListData == null) return
         listData.clear()
         listData.addAll(newListData)
-        notifyDataSetChanged()
+        notifyItemRangeInserted(0, newListData.size)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
@@ -52,6 +53,19 @@ class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.ListViewHolder>()
             binding.root.setOnClickListener {
                 onItemClick?.invoke(listData[adapterPosition])
             }
+        }
+    }
+
+    companion object{
+        private val MOVIES_COMPARATOR = object: DiffUtil.ItemCallback<Movies>() {
+            override fun areItemsTheSame(oldItem: Movies, newItem: Movies): Boolean {
+                return oldItem.movieId == newItem.movieId
+            }
+
+            override fun areContentsTheSame(oldItem: Movies, newItem: Movies): Boolean {
+                return oldItem == newItem
+            }
+
         }
     }
 }

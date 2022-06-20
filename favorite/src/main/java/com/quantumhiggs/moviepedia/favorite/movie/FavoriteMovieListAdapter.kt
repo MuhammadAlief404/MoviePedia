@@ -20,7 +20,7 @@ class FavoriteMovieListAdapter : RecyclerView.Adapter<FavoriteMovieListAdapter.L
         if (newListData == null) return
         listData.clear()
         listData.addAll(newListData)
-        notifyDataSetChanged()
+        notifyItemRangeInserted(0, newListData.size)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
