@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/movieFragment"
+        android:checked="true"
+        android:icon="@drawable/ic_movie"
+        android:title="@string/movie" />
+    <item
+        android:id="@+id/tvShowFragment"
+        android:icon="@drawable/ic_television"
+        android:title="@string/tv_show" />
+    <item
+        android:id="@+id/favoriteMovieFragment"
+        android:icon="@drawable/ic_favorite_movie"
+        android:title="Fav Movie" />
+    <item
+        android:id="@+id/favoriteTvShowFragment"
+        android:icon="@drawable/ic_favorite_tv"
+        android:title="Fav Tv Show" />
+</menu>
