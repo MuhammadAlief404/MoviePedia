@@ -41,7 +41,7 @@ class MovieFragment : Fragment() {
             findNavController().navigate(R.id.toDetailMovie, bundle)
         }
 
-        viewModel.movieList.observe(viewLifecycleOwner, { movie ->
+        viewModel.movieList.observe(viewLifecycleOwner) { movie ->
             if (movie != null) {
                 when (movie) {
                     is Resource.Loading -> {
@@ -61,7 +61,7 @@ class MovieFragment : Fragment() {
                     }
                 }
             }
-        })
+        }
 
         with(binding.rvListMovie) {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)

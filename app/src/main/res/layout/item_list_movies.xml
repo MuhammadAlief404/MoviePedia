@@ -49,6 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:textSize="20sp"
+                    android:maxLength="3"
                     app:drawableStartCompat="@drawable/ic_star"
                     tools:text="8.8" />
 

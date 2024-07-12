@@ -14,6 +14,7 @@
             android:id="@+id/img_detail_poster_mv"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
             android:scaleType="fitXY"
             android:contentDescription="@string/movie_poster"
             app:layout_constraintBottom_toTopOf="@+id/tv_detail_title_mv"
@@ -76,6 +77,7 @@
             app:layout_constraintEnd_toEndOf="@+id/tv_detail_rating"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_detail_rating"
+            android:maxLines="3"
             tools:text="8.8" />
 
         <TextView
@@ -141,6 +143,7 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
             android:background="@drawable/ic_favorite_blank"
             app:layout_constraintEnd_toStartOf="@+id/btn_share"
             app:layout_constraintTop_toTopOf="parent" />

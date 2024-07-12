@@ -35,6 +35,8 @@ buildscript {
 
     ext.nav_version = "2.4.2"
 
+    ext.palette_version = "1.0.0"
+
     repositories {
         google()
         mavenCentral()
